@@ -174,7 +174,8 @@ class RunTask:
         r_year=1.5,
         sigma_e=0.32,
         sigma_b=0.01,
-        device=torch.device("cuda:0" if torch.cuda.is_available() else "cpu"),
+        device=torch.device("cpu"),
+        #device=torch.device("cuda:0" if torch.cuda.is_available() else "cpu"),
     ):
         """
         Train a CNN model
@@ -286,7 +287,9 @@ class RunTask:
         r_year=1.5,
         sigma_e=0.32,
         sigma_b=0.01,
-        device=torch.device("cuda:0" if torch.cuda.is_available() else "cpu"),
+        device=torch.device("cpu"),
+
+#            device=torch.device("cuda:0" if torch.cuda.is_available() else "cpu"),
     ):
         """
         Train an RNN model

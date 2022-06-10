@@ -1,6 +1,6 @@
 from pathlib import Path
 import numpy as np
-import gdal
+from osgeo import gdal
 import math
 from itertools import repeat
 from concurrent.futures import ProcessPoolExecutor
@@ -43,7 +43,7 @@ class DataCleaner:
         image_path=Path("data/crop_yield-data_image"),
         yield_data_path=Path("data/yield_data.csv"),
         savedir=Path("data/img_output"),
-        multiprocessing=False,
+        multiprocessing=True,
         processes=4,
         parallelism=6,
     ):

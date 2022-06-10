@@ -81,7 +81,7 @@ class MODISExporter:
         min_img_val=None,
         max_img_val=None,
         major_states_only=True,
-        check_if_done=False,
+        check_if_done=True,
         download_folder=None,
     ):
         """Export an Image Collection from Earth Engine to Google Drive
@@ -196,7 +196,7 @@ class MODISExporter:
                         scale,
                         coordinate_system,
                     )
-                except (ee.ee_exception.EEException, ssl.SSLEOFError):
+                except (ee.ee_exception.EEException, ossl.SSLEOFErrr):
                     print(f"Retrying State {int(state_id)}, County {int(county_id)}")
                     time.sleep(10)
                     continue

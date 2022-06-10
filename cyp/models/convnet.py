@@ -44,7 +44,9 @@ class ConvModel(ModelBase):
         r_year=1.5,
         sigma_e=0.01,
         sigma_b=0.01,
-        device=torch.device("cuda:0" if torch.cuda.is_available() else "cpu"),
+        device=torch.device("cpu"),
+
+            #device=torch.device("cuda:0" if torch.cuda.is_available() else "cpu"),
     ):
 
         # save values for reinitialization

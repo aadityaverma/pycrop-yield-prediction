@@ -34,7 +34,7 @@ class GaussianProcess:
         model_bias,
     ):
 
-        # makes sure the features have an additional testue for the bias term
+        # makes sure the features have an additional test for the bias term
         # We call the features H since the features are used as the basis functions h(x)
         H_train = np.concatenate(
             (feat_train, np.ones((feat_train.shape[0], 1))), axis=1
